@@ -1,0 +1,903 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f8fb;
+    color: #172033;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 7%;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e7ebf0;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: #142033;
+}
+
+.logo span {
+    color: #168a52;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #505b6d;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #168a52;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 680px;
+
+    padding: 80px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 430px;
+    gap: 60px;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2faf6 0%,
+            #ffffff 55%,
+            #edf8f3 100%
+        );
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 15px;
+    margin-bottom: 20px;
+
+    background: #e1f4eb;
+    color: #168a52;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 58px;
+    line-height: 1.08;
+    letter-spacing: -2px;
+
+    margin-bottom: 22px;
+
+    color: #142033;
+}
+
+.hero-text p {
+    max-width: 590px;
+
+    margin-bottom: 30px;
+
+    color: #687386;
+
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.primary {
+    background: #168a52;
+    color: #ffffff;
+
+    border: 2px solid #168a52;
+}
+
+.primary:hover {
+    background: #116b40;
+    border-color: #116b40;
+
+    transform: translateY(-2px);
+}
+
+.secondary {
+    background: #ffffff;
+    color: #172033;
+
+    border: 2px solid #dce3ea;
+}
+
+.secondary:hover {
+    border-color: #168a52;
+    color: #168a52;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   QUOTE CARD
+========================= */
+
+.quote-card {
+    width: 100%;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8edf2;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 60px rgba(24, 45, 65, 0.12);
+}
+
+.quote-card h2 {
+    margin-bottom: 8px;
+
+    font-size: 25px;
+    color: #172033;
+}
+
+.quote-card p {
+    margin-bottom: 24px;
+
+    color: #778295;
+
+    font-size: 14px;
+}
+
+.quote-card input,
+.quote-card select {
+    width: 100%;
+
+    padding: 14px 15px;
+    margin-bottom: 14px;
+
+    border: 1px solid #dce3ea;
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #333d4d;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.quote-card input:focus,
+.quote-card select:focus {
+    border-color: #168a52;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 138, 82, 0.08);
+}
+
+.quote-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #168a52;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.quote-btn:hover {
+    background: #116b40;
+
+    transform: translateY(-1px);
+}
+
+.quote-card small {
+    display: block;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    color: #8993a4;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.section-description {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #717d8f;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    padding: 90px 0;
+
+    background: #ffffff;
+}
+
+.services h2 {
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    font-size: 38px;
+}
+
+.services .section-description {
+    margin-bottom: 50px;
+}
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    padding: 32px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e6ebf0;
+
+    border-radius: 16px;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(27, 45, 67, 0.08);
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    background: #e2f5ec;
+
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+}
+
+.service-card p {
+    color: #707b8e;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how {
+    padding: 90px 0;
+
+    background: #f5f8fa;
+}
+
+.how h2 {
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    font-size: 38px;
+}
+
+.how .section-description {
+    margin-bottom: 50px;
+}
+
+.steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.step {
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e7edf2;
+
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+.step span {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background: #168a52;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #737e90;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 90px 7%;
+
+    background: #142033;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+
+    font-size: 40px;
+}
+
+.contact p {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: #b9c3d1;
+}
+
+.contact .btn {
+    margin: 5px;
+}
+
+
+/* =========================
+   AI CHAT FLOATING BUTTON
+========================= */
+
+.chat-button {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 2000;
+
+    width: 62px;
+    height: 62px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #168a52;
+    color: #ffffff;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.20);
+
+    transition: 0.3s;
+}
+
+.chat-button:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   AI CHAT BOX
+========================= */
+
+.chat-box {
+    position: fixed;
+
+    right: 25px;
+    bottom: 100px;
+
+    z-index: 1999;
+
+    width: 370px;
+    max-width: calc(100% - 30px);
+
+    display: none;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8ee;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.20);
+}
+
+.chat-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 17px 20px;
+
+    background: #168a52;
+    color: #ffffff;
+}
+
+.chat-header strong {
+    display: block;
+
+    font-size: 15px;
+}
+
+.chat-header small {
+    display: block;
+
+    margin-top: 2px;
+
+    opacity: 0.85;
+
+    font-size: 11px;
+}
+
+.chat-header button {
+    border: none;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   CHAT MESSAGES
+========================= */
+
+.chat-messages {
+    height: 330px;
+
+    overflow-y: auto;
+
+    padding: 18px;
+
+    background: #f7f9fb;
+}
+
+.bot-message,
+.user-message {
+    max-width: 84%;
+
+    margin-bottom: 10px;
+
+    padding: 11px 14px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    animation: messageAppear 0.25s ease;
+}
+
+.bot-message {
+    background: #ffffff;
+    color: #3d4655;
+
+    border: 1px solid #e4e9ef;
+
+    border-top-left-radius: 4px;
+}
+
+.user-message {
+    margin-left: auto;
+
+    background: #168a52;
+    color: #ffffff;
+
+    border-top-right-radius: 4px;
+}
+
+@keyframes messageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   CHAT INPUT
+========================= */
+
+.chat-input {
+    display: flex;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #e7ecf1;
+}
+
+.chat-input input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 11px 12px;
+
+    border: 1px solid #dce3ea;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+.chat-input input:focus {
+    border-color: #168a52;
+}
+
+.chat-input button {
+    padding: 0 16px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #168a52;
+    color: #ffffff;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background: #116b40;
+}
+
+
+/* =========================
+   WHATSAPP ACTION
+========================= */
+
+.whatsapp-action {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 13px 15px;
+
+    background: #168a52;
+    color: #ffffff;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.whatsapp-action:hover {
+    background: #116b40;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+
+    background: #0d1624;
+
+    color: #9da8b8;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+    header {
+        padding: 17px 5%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 65px 5%;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .quote-card {
+        max-width: 600px;
+    }
+
+    .service-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 15px 5%;
+    }
+
+    nav {
+        gap: 13px;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    .hero {
+        padding: 45px 5%;
+
+        gap: 35px;
+    }
+
+    h1 {
+        font-size: 39px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .quote-card {
+        padding: 25px;
+    }
+
+
+    .services,
+    .how {
+        padding: 65px 0;
+    }
+
+    .services h2,
+    .how h2 {
+        font-size: 30px;
+    }
+
+
+    .contact {
+        padding: 65px 5%;
+    }
+
+    .contact h2 {
+        font-size: 30px;
+    }
+
+
+    .chat-box {
+        right: 15px;
+        bottom: 90px;
+
+        width: calc(100% - 30px);
+    }
+
+    .chat-button {
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
